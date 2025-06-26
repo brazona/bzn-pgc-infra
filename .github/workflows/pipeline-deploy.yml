@@ -40,7 +40,7 @@ jobs:
     - name: Checkout
       uses: actions/checkout@v3
     - name: File Env infrastructure
-      if: contains(inputs.JAEGER_INFRASTRUCTURE_ENV, 'INFRASTRUCTURE')
+      if: contains(inputs.environment_name, 'INFRASTRUCTURE')
       run: |
         echo "VALUES=${{ vars.JAEGER_INFRASTRUCTURE_ENV }}" >> $GITHUB_ENV
     - name: File Env Homologation
