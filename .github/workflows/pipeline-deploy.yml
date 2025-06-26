@@ -42,7 +42,7 @@ jobs:
     - name: File Env infrastructure
       if: contains(inputs.environment_name, 'INFRASTRUCTURE')
       run: |
-        echo "VALUES=${{ vars.JAEGER_INFRASTRUCTURE_ENV }}" >> $GITHUB_ENV
+        echo "VALUES=${{ vars.inputs.environment_variable_name }}" >> $GITHUB_ENV
     - name: File Env Homologation
       if: contains(inputs.environment_variable_name, 'HOMOLOGATION_ENV')
       run: |
